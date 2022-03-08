@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="dataset">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" ref="insurance_record"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="insurance_record">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="id"/>
+                <xs:element ref="first_name"/>
+                <xs:element ref="last_name"/>
+                <xs:element ref="phone"/>
+                <xs:element ref="car"/>
+                <xs:element ref="model"/>
+                <xs:element ref="insurance"/>
+                <xs:element ref="contract_date"/>
+
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="id" type="xs:integer"/>
+    <xs:element name="first_name" type="xs:NCName"/>
+    <xs:element name="last_name" type="xs:string"/>
+    <xs:element name="phone" type="xs:NMTOKEN"/>
+    <xs:element name="car" type="xs:string"/>
+    <xs:element name="model" type="xs:integer"/>
+    <xs:element name="insurance" type="xs:decimal"/>
+    <xs:element name="contract_date" type="xs:date"/>
+</xs:schema>
